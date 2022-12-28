@@ -1,0 +1,170 @@
+body.no-scroll {
+  overflow: hidden;
+}
+
+header.header {
+  height: 80px;
+  background-color: #2B2B2B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  color: #fff;
+}
+header.header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header.header .navbar .navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 20px;
+}
+header.header .navbar .navbar-list .navbar-list-item .navbar-list-item-text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+header.header .navbar .navbar-list .navbar-list-item .navbar-list-item-text:hover {
+  background-color: #A159FF;
+}
+header.header .navbar .navbar-list .navbar-list-item .navbar-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  justify-content: space-around;
+  gap: 0 10px;
+  background-color: #A159FF;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 15px;
+  position: relative;
+  border-radius: 10px;
+  color: #fff;
+}
+header.header .navbar .navbar-list .navbar-list-item .navbar-btn:hover {
+  background-color: #be8cff;
+}
+header.header .mobile-control {
+  display: none;
+}
+header.header .mobile-control:focus span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+header.header .mobile-control:focus span:nth-child(2) {
+  width: 0;
+}
+header.header .mobile-control:focus span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+header.header .mobile-control span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.2s all ease-in-out;
+}
+header.header .mobile-control span:nth-child(2) {
+  width: 20px;
+}
+header.header .mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #2B2B2B;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+header.header .mobile-menu .mobile-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 40px 0;
+  height: 100%;
+}
+header.header .mobile-menu .mobile-list .mobile-list-item {
+  width: 100%;
+  display: flex;
+}
+header.header .mobile-menu .mobile-list .mobile-list-item .navbar-list-item-text {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  padding: 10px 10px 10px 50px;
+  transition: background-color 0.3s ease-in-out;
+}
+header.header .mobile-menu .mobile-list .mobile-list-item .navbar-list-item-text.btn {
+  background-color: #A159FF;
+}
+header.header .mobile-menu .mobile-list .mobile-list-item .navbar-btn {
+  width: 100%;
+  border: none;
+  margin: 0 40px;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 700;
+  justify-content: left;
+  gap: 0 10px;
+  background-color: #A159FF;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 15px;
+  color: #fff;
+}
+header.header .mobile-menu.active {
+  left: 0;
+}
+header.header .mobile-menu .close {
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header.header {
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header.header {
+    padding: 20px 20px;
+  }
+  header.header .logo svg {
+    width: 200px;
+  }
+  header.header .navbar {
+    display: none;
+  }
+  header.header .mobile-control {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */
